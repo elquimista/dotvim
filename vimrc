@@ -1,5 +1,6 @@
 " Alchemist (@artificis)
 set runtimepath^=~/.vim/plugins/vim-code-dark
+set runtimepath^=~/.vim/plugins/vim-javascript
 
 let mapleader=','
 
