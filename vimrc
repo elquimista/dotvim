@@ -20,6 +20,7 @@ set cursorline
 filetype plugin indent on
 set wildmenu
 set showmatch
+set colorcolumn=80
 
 " Searching
 set incsearch
@@ -30,6 +31,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Folding
 set foldenable
 set foldmethod=indent
+set foldlevelstart=10
+set foldnestmax=10
 
 " Custom Movements
 nnoremap j gj
