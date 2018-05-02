@@ -4,3 +4,9 @@
 [submodule "plugins/vim-javascript"]
 	path = plugins/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule "plugins/auto-pairs"]
+	path = plugins/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "plugins/vim-endwise"]
+	path = plugins/vim-endwise
+	url = https://github.com/tpope/vim-endwise

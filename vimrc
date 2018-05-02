@@ -1,6 +1,8 @@
 " Alchemist (@artificis)
 set runtimepath^=~/.vim/plugins/vim-code-dark
 set runtimepath^=~/.vim/plugins/vim-javascript
+set runtimepath^=~/.vim/plugins/auto-pairs
+set runtimepath^=~/.vim/plugins/vim-endwise
 
 let mapleader=','
 
@@ -66,5 +68,5 @@ endfunc
 
 noremap <leader>tn :call ToggleNumber()<CR>
 
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
