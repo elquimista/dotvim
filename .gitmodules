@@ -10,3 +10,6 @@
 [submodule "plugins/vim-endwise"]
 	path = plugins/vim-endwise
 	url = https://github.com/tpope/vim-endwise
+[submodule "plugins/vim-slim"]
+	path = plugins/vim-slim
+	url = https://github.com/slim-template/vim-slim.git
