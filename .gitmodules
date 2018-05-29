@@ -16,3 +16,6 @@
 [submodule "plugins/vim-markdown"]
 	path = plugins/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown
+[submodule "plugins/vim-jsx"]
+	path = plugins/vim-jsx
+	url = https://github.com/artificis/vim-jsx
