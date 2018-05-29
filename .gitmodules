@@ -13,3 +13,6 @@
 [submodule "plugins/vim-slim"]
 	path = plugins/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
+[submodule "plugins/vim-markdown"]
+	path = plugins/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown

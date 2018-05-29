@@ -4,6 +4,7 @@ set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/auto-pairs
 set runtimepath^=~/.vim/plugins/vim-endwise
 set runtimepath^=~/.vim/plugins/vim-slim
+set runtimepath^=~/.vim/plugins/vim-markdown
 
 let mapleader=','
 
