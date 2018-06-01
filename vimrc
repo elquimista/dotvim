@@ -32,6 +32,7 @@ set colorcolumn=80
 set incsearch
 set hlsearch
 set path+=**
+set wildignore+=**/node_modules/**
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Folding
