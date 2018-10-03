@@ -1,4 +1,4 @@
-" Alchemist (@artificis)
+" el que m'est (@elquimista)
 set runtimepath^=~/.vim/plugins/vim-code-dark
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-jsx
@@ -72,5 +72,32 @@ endfunc
 
 noremap <leader>tn :call ToggleNumber()<CR>
 
-au BufWinLeave ?* mkview
-au BufWinEnter ?* silent loadview
+let g:skipview_files = []
+function! MakeViewCheck()
+  if has('quickfix') && &buftype =~ 'nofile'
+    " Buffer is marked as not a file
+    return 0
+  endif
+  if empty(glob(expand('%:p')))
+    " File does not exist on disk
+    return 0
+  endif
+  if len($TEMP) && expand('%:p:h') == $TEMP
+    " We're in a temp dir
+    return 0
+  endif
+  if len($TMP) && expand('%:p:h') == $TMP
+    " Also in temp dir
+    return 0
+  endif
+  if index(g:skipview_files, expand('%')) >= 0
+    " File is in skip list
+    return 0
+  endif
+  return 1
+endfunction
+
+augroup vimrcAutoView
+  au BufWritePost,BufLeave,WinLeave ?* if MakeViewCheck() | mkview | endif
+  au BufWinEnter ?* if MakeViewCheck() | silent loadview | endif
+augroup end
