@@ -54,11 +54,14 @@ inoremap jk <esc>
 inoremap <esc> <nop>
 nnoremap <leader>s :mksession!<CR>
 
-" Backups
+" Backups, undofiles, swap files
 set backup
-set backupdir=~/.vimtemp
+set backupdir=~/.vim/tmp/backup
+if !isdirectory(&backupdir) | call mkdir(&backupdir, 'p', 0700) | endif
 set writebackup
 set noundofile
+set dir=~/.vim/tmp/swap
+if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 
 " Custom Functions
 function! ToggleNumber()
