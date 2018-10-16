@@ -8,6 +8,7 @@ set runtimepath^=~/.vim/plugins/vim-slim
 set runtimepath^=~/.vim/plugins/vim-markdown
 
 let mapleader=','
+set backspace=
 
 " Colors
 colorscheme codedark
