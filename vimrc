@@ -12,6 +12,9 @@ let mapleader=','
 " Colors
 colorscheme codedark
 syntax on
+augroup filetypedetect
+  au BufRead,BufNewFile *.slim set filetype=slim
+augroup END
 
 " Spaces And Tabs
 set tabstop=2
