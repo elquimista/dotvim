@@ -14,6 +14,7 @@ set backspace=
 colorscheme codedark
 syntax on
 augroup filetypedetect
+  au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
   au BufRead,BufNewFile *.slim set filetype=slim
 augroup END
 
