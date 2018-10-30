@@ -7,6 +7,7 @@ set runtimepath^=~/.vim/plugins/vim-endwise
 set runtimepath^=~/.vim/plugins/vim-slim
 set runtimepath^=~/.vim/plugins/vim-markdown
 set runtimepath^=~/.vim/plugins/vim-matchup
+set runtimepath^=~/.vim/plugins/ale
 
 let mapleader=','
 set backspace=

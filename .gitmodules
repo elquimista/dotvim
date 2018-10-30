@@ -22,3 +22,6 @@
 [submodule "plugins/vim-matchup"]
 	path = plugins/vim-matchup
 	url = https://github.com/andymass/vim-matchup
+[submodule "plugins/ale"]
+	path = plugins/ale
+	url = https://github.com/w0rp/ale.git
