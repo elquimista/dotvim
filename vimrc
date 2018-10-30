@@ -11,11 +11,12 @@ set runtimepath^=~/.vim/plugins/vim-matchup
 let mapleader=','
 set backspace=
 
-" Colors
+" Colors & Syntax
 syntax on
 set background=dark
 colorscheme solarized
 highlight MatchParen ctermbg=black cterm=underline
+let g:javascript_plugin_flow=1
 augroup filetypedetect
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
   au BufRead,BufNewFile *.slim set filetype=slim
