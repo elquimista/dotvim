@@ -8,6 +8,7 @@ set runtimepath^=~/.vim/plugins/vim-slim
 set runtimepath^=~/.vim/plugins/vim-markdown
 set runtimepath^=~/.vim/plugins/vim-matchup
 set runtimepath^=~/.vim/plugins/ale
+set runtimepath^=~/.vim/plugins/vim-tmux-navigator
 
 let mapleader=','
 set backspace=
