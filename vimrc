@@ -30,6 +30,7 @@ set number
 set showcmd
 set cursorline
 filetype plugin indent on
+packadd! matchit
 set wildmenu
 set showmatch
 set colorcolumn=80
