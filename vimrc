@@ -6,14 +6,16 @@ set runtimepath^=~/.vim/plugins/auto-pairs
 set runtimepath^=~/.vim/plugins/vim-endwise
 set runtimepath^=~/.vim/plugins/vim-slim
 set runtimepath^=~/.vim/plugins/vim-markdown
+set runtimepath^=~/.vim/plugins/vim-matchup
 
 let mapleader=','
 set backspace=
 
 " Colors
+syntax on
 set background=dark
 colorscheme solarized
-syntax on
+highlight MatchParen ctermbg=black cterm=underline
 augroup filetypedetect
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
   au BufRead,BufNewFile *.slim set filetype=slim
@@ -30,7 +32,6 @@ set number
 set showcmd
 set cursorline
 filetype plugin indent on
-packadd! matchit
 set wildmenu
 set showmatch
 set colorcolumn=80
