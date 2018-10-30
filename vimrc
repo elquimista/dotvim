@@ -1,5 +1,5 @@
 " el que m'est (@elquimista)
-set runtimepath^=~/.vim/plugins/vim-code-dark
+set runtimepath^=~/.vim/plugins/vim-colors-solarized
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-jsx
 set runtimepath^=~/.vim/plugins/auto-pairs
@@ -11,7 +11,8 @@ let mapleader=','
 set backspace=
 
 " Colors
-colorscheme codedark
+set background=dark
+colorscheme solarized
 syntax on
 augroup filetypedetect
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx

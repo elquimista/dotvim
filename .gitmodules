@@ -1,6 +1,3 @@
-[submodule "plugins/vim-code-dark"]
-	path = plugins/vim-code-dark
-	url = https://github.com/tomasiser/vim-code-dark
 [submodule "plugins/vim-javascript"]
 	path = plugins/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
@@ -19,3 +16,6 @@
 [submodule "plugins/vim-jsx"]
 	path = plugins/vim-jsx
 	url = https://github.com/elquimista/vim-jsx
+[submodule "plugins/vim-colors-solarized"]
+	path = plugins/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
