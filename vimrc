@@ -12,6 +12,7 @@ set runtimepath^=~/.vim/plugins/vim-tmux-navigator
 set runtimepath^=~/.vim/plugins/vim-git-blame
 set runtimepath^=~/.vim/plugins/vim-airline
 set runtimepath^=~/.vim/plugins/vim-airline-themes
+set runtimepath^=~/.vim/plugins/vim-fugitive
 
 let mapleader=','
 set backspace=
@@ -19,6 +20,7 @@ set backspace=
 " Colors & Syntax
 syntax on
 set background=dark
+let g:solarized_diffmode='high'
 colorscheme solarized
 highlight MatchParen ctermbg=black cterm=underline
 let g:javascript_plugin_flow=1
@@ -120,3 +122,7 @@ augroup vimrcAutoView
   au BufWritePost,BufLeave,WinLeave ?* if MakeViewCheck() | mkview | endif
   au BufWinEnter ?* if MakeViewCheck() | silent loadview | endif
 augroup end
+
+if has('autocmd')
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+endif
