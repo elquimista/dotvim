@@ -10,6 +10,8 @@ set runtimepath^=~/.vim/plugins/vim-matchup
 set runtimepath^=~/.vim/plugins/ale
 set runtimepath^=~/.vim/plugins/vim-tmux-navigator
 set runtimepath^=~/.vim/plugins/vim-git-blame
+set runtimepath^=~/.vim/plugins/vim-airline
+set runtimepath^=~/.vim/plugins/vim-airline-themes
 
 let mapleader=','
 set backspace=
@@ -39,6 +41,8 @@ filetype plugin indent on
 set wildmenu
 set showmatch
 set colorcolumn=80
+let g:airline_theme='solarized'
+set noshowmode
 
 " Searching
 set incsearch
