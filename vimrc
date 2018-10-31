@@ -44,6 +44,10 @@ set wildmenu
 set showmatch
 set colorcolumn=80
 let g:airline_theme='solarized'
+if !exists('g:airline_symbols')
+  let g:airline_symbols={}
+endif
+let g:airline_symbols.branch=''
 set noshowmode
 
 " Searching
