@@ -50,6 +50,10 @@ endif
 let g:airline_symbols.branch=''
 set noshowmode
 
+" Splitting
+set splitbelow
+set splitright
+
 " Searching
 set incsearch
 set hlsearch
