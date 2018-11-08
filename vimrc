@@ -13,6 +13,7 @@ set runtimepath^=~/.vim/plugins/vim-git-blame
 set runtimepath^=~/.vim/plugins/vim-airline
 set runtimepath^=~/.vim/plugins/vim-airline-themes
 set runtimepath^=~/.vim/plugins/vim-fugitive
+set runtimepath^=~/.vim/plugins/vim-graphql
 
 let mapleader=','
 set backspace=
@@ -27,6 +28,7 @@ let g:javascript_plugin_flow=1
 augroup filetypedetect
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
   au BufRead,BufNewFile *.slim set filetype=slim
+  au BufRead,BufNewFile *.graphql set filetype=graphql
 augroup END
 
 " Spaces And Tabs
