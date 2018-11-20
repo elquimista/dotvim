@@ -1,4 +1,10 @@
-" el que m'est (@elquimista)
+"
+"      //                      o        _/_
+"  _  //    _,  . . _    ______' _  _   /  
+" </_</_   (_)_(_/_</_  / / / <_</_/_)_<__ 
+"           />                             
+"          |/                              
+"
 set runtimepath^=~/.vim/plugins/vim-colorschemes
 set runtimepath^=~/.vim/plugins/vim-deep-space
 set runtimepath^=~/.vim/plugins/vim-javascript
@@ -19,7 +25,9 @@ set runtimepath^=~/.vim/plugins/vim-graphql
 let mapleader=','
 set backspace=
 
-" Colors
+" ┌─┐┌─┐┬  ┌─┐┬─┐┌─┐
+" │  │ ││  │ │├┬┘└─┐
+" └─┘└─┘┴─┘└─┘┴└─└─┘
 if exists('+termguicolors')
   let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
@@ -33,7 +41,9 @@ colorscheme deep-space
 " colorscheme birds-of-paradise
 highlight MatchParen ctermbg=black cterm=underline
 
-" Syntax
+" ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
+" └─┐└┬┘│││ │ ├─┤┌┴┬┘
+" └─┘ ┴ ┘└┘ ┴ ┴ ┴┴ └─
 syntax on
 let g:javascript_plugin_flow=1
 augroup filetypedetect
@@ -42,13 +52,17 @@ augroup filetypedetect
   au BufRead,BufNewFile *.graphql set filetype=graphql
 augroup END
 
-" Spaces And Tabs
+" ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐   ┬   ┌┬┐┌─┐┌┐ ┌─┐
+" └─┐├─┘├─┤│  ├┤ └─┐  ┌┼─   │ ├─┤├┴┐└─┐
+" └─┘┴  ┴ ┴└─┘└─┘└─┘  └┘    ┴ ┴ ┴└─┘└─┘
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-" UI Config
+" ┬ ┬┬  ┌─┐┌─┐┌┐┌┌─┐┬┌─┐
+" │ ││  │  │ ││││├┤ ││ ┬
+" └─┘┴  └─┘└─┘┘└┘└  ┴└─┘
 set number
 set showcmd
 set cursorline
@@ -64,24 +78,32 @@ endif
 let g:airline_symbols.branch=''
 set noshowmode
 
-" Splitting
+" ┌─┐┌─┐┬  ┬┌┬┐┌┬┐┬┌┐┌┌─┐
+" └─┐├─┘│  │ │  │ │││││ ┬
+" └─┘┴  ┴─┘┴ ┴  ┴ ┴┘└┘└─┘
 set splitbelow
 set splitright
 
-" Searching
+" ┌─┐┌─┐┌─┐┬─┐┌─┐┬ ┬┬┌┐┌┌─┐
+" └─┐├┤ ├─┤├┬┘│  ├─┤│││││ ┬
+" └─┘└─┘┴ ┴┴└─└─┘┴ ┴┴┘└┘└─┘
 set incsearch
 set hlsearch
 set path+=**
 set wildignore+=**/node_modules/**
 nnoremap <leader><space> :nohlsearch<CR>
 
-" Folding
+" ┌─┐┌─┐┬  ┌┬┐┬┌┐┌┌─┐
+" ├┤ │ ││   │││││││ ┬
+" └  └─┘┴─┘─┴┘┴┘└┘└─┘
 set foldenable
 set foldmethod=indent
 set foldlevelstart=10
 set foldnestmax=10
 
-" Custom Movements
+" ┌─┐┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌┬┐┌─┐┬  ┬┌─┐┌┬┐┌─┐┌┐┌┌┬┐┌─┐
+" │  │ │└─┐ │ │ ││││  ││││ │└┐┌┘├┤ │││├┤ │││ │ └─┐
+" └─┘└─┘└─┘ ┴ └─┘┴ ┴  ┴ ┴└─┘ └┘ └─┘┴ ┴└─┘┘└┘ ┴ └─┘
 nnoremap j gj
 nnoremap k gk
 nnoremap gV `[v`]
@@ -94,7 +116,9 @@ inoremap jk <esc>
 inoremap <esc> <nop>
 nnoremap <leader>s :mksession!<CR>
 
-" Backups, undofiles, swap files
+" ┌┐ ┌─┐┌─┐┬┌─┬ ┬┌─┐┌─┐   ┬ ┬┌┐┌┌┬┐┌─┐┌─┐┬┬  ┌─┐┌─┐   ┌─┐┬ ┬┌─┐┌─┐  ┌─┐┬┬  ┌─┐┌─┐
+" ├┴┐├─┤│  ├┴┐│ │├─┘└─┐   │ ││││ │││ │├┤ ││  ├┤ └─┐   └─┐│││├─┤├─┘  ├┤ ││  ├┤ └─┐
+" └─┘┴ ┴└─┘┴ ┴└─┘┴  └─┘┘  └─┘┘└┘─┴┘└─┘└  ┴┴─┘└─┘└─┘┘  └─┘└┴┘┴ ┴┴    └  ┴┴─┘└─┘└─┘
 set backup
 set backupdir=~/.vim/tmp/backup
 if !isdirectory(&backupdir) | call mkdir(&backupdir, 'p', 0700) | endif
@@ -103,7 +127,9 @@ set noundofile
 set dir=~/.vim/tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 
-" Custom Functions
+" ┌─┐┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌─┐┬ ┬┌┐┌┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
+" │  │ │└─┐ │ │ ││││  ├┤ │ │││││   │ ││ ││││└─┐
+" └─┘└─┘└─┘ ┴ └─┘┴ ┴  └  └─┘┘└┘└─┘ ┴ ┴└─┘┘└┘└─┘
 function! ToggleNumber()
   if (&relativenumber == 1)
     set norelativenumber
