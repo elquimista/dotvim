@@ -1,5 +1,6 @@
 " el que m'est (@elquimista)
-set runtimepath^=~/.vim/plugins/vim-solarized8
+set runtimepath^=~/.vim/plugins/vim-colorschemes
+set runtimepath^=~/.vim/plugins/vim-deep-space
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-jsx
 set runtimepath^=~/.vim/plugins/auto-pairs
@@ -25,8 +26,11 @@ if exists('+termguicolors')
   set termguicolors
 endif
 set background=dark
-let g:solarized_diffmode='high'
-colorscheme solarized8
+" let g:solarized_diffmode='high'
+" colorscheme solarized8_light
+" colorscheme coffee
+colorscheme deep-space
+" colorscheme birds-of-paradise
 highlight MatchParen ctermbg=black cterm=underline
 
 " Syntax
@@ -52,7 +56,8 @@ filetype plugin indent on
 set wildmenu
 set showmatch
 set colorcolumn=80
-let g:airline_theme='solarized'
+" let g:airline_theme='solarized'
+let g:airline_theme='deep_space'
 if !exists('g:airline_symbols')
   let g:airline_symbols={}
 endif
