@@ -16,9 +16,6 @@
 [submodule "plugins/vim-jsx"]
 	path = plugins/vim-jsx
 	url = https://github.com/elquimista/vim-jsx
-[submodule "plugins/vim-colors-solarized"]
-	path = plugins/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "plugins/vim-matchup"]
 	path = plugins/vim-matchup
 	url = https://github.com/andymass/vim-matchup
@@ -43,3 +40,6 @@
 [submodule "plugins/vim-graphql"]
 	path = plugins/vim-graphql
 	url = https://github.com/jparise/vim-graphql
+[submodule "plugins/vim-solarized8"]
+	path = plugins/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8

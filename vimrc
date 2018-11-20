@@ -1,5 +1,5 @@
 " el que m'est (@elquimista)
-set runtimepath^=~/.vim/plugins/vim-colors-solarized
+set runtimepath^=~/.vim/plugins/vim-solarized8
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-jsx
 set runtimepath^=~/.vim/plugins/auto-pairs
@@ -18,12 +18,19 @@ set runtimepath^=~/.vim/plugins/vim-graphql
 let mapleader=','
 set backspace=
 
-" Colors & Syntax
-syntax on
+" Colors
+if exists('+termguicolors')
+  let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 set background=dark
 let g:solarized_diffmode='high'
-colorscheme solarized
+colorscheme solarized8
 highlight MatchParen ctermbg=black cterm=underline
+
+" Syntax
+syntax on
 let g:javascript_plugin_flow=1
 augroup filetypedetect
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
