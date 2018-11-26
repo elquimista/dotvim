@@ -67,14 +67,6 @@ func! SetColorSchemeTo(colorscheme)
     colorscheme material
   endif
 endfunc
-"call SetColorSchemeTo('papercolor-dark')
-"call SetColorSchemeTo('papercolor-light')
-"call SetColorSchemeTo('gruvbox-dark')
-"call SetColorSchemeTo('gruvbox-light')
-"call SetColorSchemeTo('nord')
-"call SetColorSchemeTo('one-dark')
-"call SetColorSchemeTo('ayu-dark')
-"call SetColorSchemeTo('ayu-mirage')
 call SetColorSchemeTo('material-palenight')
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
@@ -111,6 +103,10 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.branch=''
 set noshowmode
+let g:netrw_liststyle=3
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let g:netrw_winsize=25
 
 " ┌─┐┌─┐┬  ┬┌┬┐┌┬┐┬┌┐┌┌─┐
 " └─┐├─┘│  │ │  │ │││││ ┬
