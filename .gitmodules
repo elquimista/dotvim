@@ -40,9 +40,6 @@
 [submodule "plugins/vim-graphql"]
 	path = plugins/vim-graphql
 	url = https://github.com/jparise/vim-graphql
-[submodule "plugins/vim-deep-space"]
-	path = plugins/vim-deep-space
-	url = https://github.com/tyrannicaltoucan/vim-deep-space
-[submodule "plugins/vim-colorschemes"]
-	path = plugins/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes
+[submodule "plugins/papercolor-theme"]
+	path = plugins/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme
