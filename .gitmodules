@@ -58,3 +58,6 @@
 [submodule "plugins/material.vim"]
 	path = plugins/material.vim
 	url = https://github.com/kaicataldo/material.vim
+[submodule "plugins/minibufexpl"]
+	path = plugins/minibufexpl
+	url = https://github.com/weynhamz/vim-plugin-minibufexpl
