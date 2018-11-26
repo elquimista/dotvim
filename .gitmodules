@@ -52,3 +52,6 @@
 [submodule "plugins/vim-one"]
 	path = plugins/vim-one
 	url = https://github.com/rakr/vim-one
+[submodule "plugins/ayu-vim"]
+	path = plugins/ayu-vim
+	url = https://github.com/ayu-theme/ayu-vim
