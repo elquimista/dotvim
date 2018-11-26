@@ -6,6 +6,7 @@
 "          |/
 "
 set runtimepath^=~/.vim/plugins/papercolor-theme
+set runtimepath^=~/.vim/plugins/gruvbox
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-jsx
 set runtimepath^=~/.vim/plugins/auto-pairs
@@ -41,10 +42,20 @@ func! SetColorSchemeTo(colorscheme)
     set background=light
     colorscheme PaperColor
     let g:airline_theme='papercolor'
+  elseif a:colorscheme == 'gruvbox-dark'
+    set background=dark
+    colorscheme gruvbox
+    let g:airline_theme='gruvbox'
+  elseif a:colorscheme == 'gruvbox-light'
+    set background=light
+    colorscheme gruvbox
+    let g:airline_theme='gruvbox'
   endif
 endfunc
-call SetColorSchemeTo('papercolor-dark')
+"call SetColorSchemeTo('papercolor-dark')
 "call SetColorSchemeTo('papercolor-light')
+call SetColorSchemeTo('gruvbox-dark')
+"call SetColorSchemeTo('gruvbox-light')
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘

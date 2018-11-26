@@ -43,3 +43,6 @@
 [submodule "plugins/papercolor-theme"]
 	path = plugins/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme
+[submodule "plugins/gruvbox"]
+	path = plugins/gruvbox
+	url = https://github.com/morhetz/gruvbox
