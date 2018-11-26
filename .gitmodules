@@ -55,3 +55,6 @@
 [submodule "plugins/ayu-vim"]
 	path = plugins/ayu-vim
 	url = https://github.com/ayu-theme/ayu-vim
+[submodule "plugins/material.vim"]
+	path = plugins/material.vim
+	url = https://github.com/kaicataldo/material.vim

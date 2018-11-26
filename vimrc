@@ -10,6 +10,7 @@ set runtimepath^=~/.vim/plugins/gruvbox
 set runtimepath^=~/.vim/plugins/nord-vim
 set runtimepath^=~/.vim/plugins/vim-one
 set runtimepath^=~/.vim/plugins/ayu-vim
+set runtimepath^=~/.vim/plugins/material.vim
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-jsx
 set runtimepath^=~/.vim/plugins/auto-pairs
@@ -60,6 +61,10 @@ func! SetColorSchemeTo(colorscheme)
   elseif a:colorscheme == 'ayu-mirage'
     let g:ayucolor='mirage'
     colorscheme ayu
+  elseif a:colorscheme == 'material-palenight'
+    set background=dark
+    let g:material_theme_style='palenight'
+    colorscheme material
   endif
 endfunc
 "call SetColorSchemeTo('papercolor-dark')
@@ -68,8 +73,9 @@ endfunc
 "call SetColorSchemeTo('gruvbox-light')
 "call SetColorSchemeTo('nord')
 "call SetColorSchemeTo('one-dark')
-call SetColorSchemeTo('ayu-dark')
+"call SetColorSchemeTo('ayu-dark')
 "call SetColorSchemeTo('ayu-mirage')
+call SetColorSchemeTo('material-palenight')
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
