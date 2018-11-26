@@ -8,6 +8,7 @@
 set runtimepath^=~/.vim/plugins/papercolor-theme
 set runtimepath^=~/.vim/plugins/gruvbox
 set runtimepath^=~/.vim/plugins/nord-vim
+set runtimepath^=~/.vim/plugins/vim-one
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-jsx
 set runtimepath^=~/.vim/plugins/auto-pairs
@@ -49,13 +50,17 @@ func! SetColorSchemeTo(colorscheme)
     colorscheme gruvbox
   elseif a:colorscheme == 'nord'
     colorscheme nord
+  elseif a:colorscheme == 'one-dark'
+    set background=dark
+    colorscheme one
   endif
 endfunc
 "call SetColorSchemeTo('papercolor-dark')
 "call SetColorSchemeTo('papercolor-light')
 "call SetColorSchemeTo('gruvbox-dark')
 "call SetColorSchemeTo('gruvbox-light')
-call SetColorSchemeTo('nord')
+"call SetColorSchemeTo('nord')
+call SetColorSchemeTo('one-dark')
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘

@@ -49,3 +49,6 @@
 [submodule "plugins/nord-vim"]
 	path = plugins/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim
+[submodule "plugins/vim-one"]
+	path = plugins/vim-one
+	url = https://github.com/rakr/vim-one
