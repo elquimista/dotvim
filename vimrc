@@ -1,9 +1,9 @@
 "
 "      //                      o        _/_
-"  _  //    _,  . . _    ______' _  _   /  
-" </_</_   (_)_(_/_</_  / / / <_</_/_)_<__ 
-"           />                             
-"          |/                              
+"  _  //    _,  . . _    ______' _  _   /
+" </_</_   (_)_(_/_</_  / / / <_</_/_)_<__
+"           />
+"          |/
 "
 set runtimepath^=~/.vim/plugins/vim-colorschemes
 set runtimepath^=~/.vim/plugins/vim-deep-space
