@@ -61,3 +61,6 @@
 [submodule "plugins/minibufexpl"]
 	path = plugins/minibufexpl
 	url = https://github.com/weynhamz/vim-plugin-minibufexpl
+[submodule "plugins/tabline.vim"]
+	path = plugins/tabline.vim
+	url = https://github.com/mkitt/tabline.vim

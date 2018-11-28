@@ -26,6 +26,7 @@ set runtimepath^=~/.vim/plugins/vim-airline-themes
 set runtimepath^=~/.vim/plugins/vim-fugitive
 set runtimepath^=~/.vim/plugins/vim-graphql
 set runtimepath^=~/.vim/plugins/minibufexpl
+set runtimepath^=~/.vim/plugins/tabline.vim
 
 let mapleader=','
 set backspace=
