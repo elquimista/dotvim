@@ -68,7 +68,7 @@ func! SetColorSchemeTo(colorscheme)
     colorscheme material
   endif
 endfunc
-call SetColorSchemeTo('material-palenight')
+call SetColorSchemeTo('papercolor-light')
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
@@ -157,6 +157,24 @@ set writebackup
 set noundofile
 set dir=~/.vim/tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
+
+" ┌┬┐┬┌┐┌┬  ┌┐ ┬ ┬┌─┐  ┌─┐─┐ ┬┌─┐┬  
+" ││││││││  ├┴┐│ │├┤   ├┤ ┌┴┬┘├─┘│  
+" ┴ ┴┴┘└┘┴  └─┘└─┘└    └─┘┴ └─┴  ┴─┘
+let g:miniBufExplBRSplit=0
+func! MBESplit(hv)
+  MBECloseAll
+  if a:hv == 'v'
+    let g:miniBufExplVSplit=1
+    let g:miniBufExplMaxSize=32
+  else
+    let g:miniBufExplVSplit=0
+    let g:miniBufExplMaxSize=0
+  endif
+  MBEOpenAll
+endfunc
+map <leader>mbeh :call MBESplit('h')<CR>
+map <leader>mbev :call MBESplit('v')<CR>
 
 " ┌─┐┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌─┐┬ ┬┌┐┌┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
 " │  │ │└─┐ │ │ ││││  ├┤ │ │││││   │ ││ ││││└─┐
