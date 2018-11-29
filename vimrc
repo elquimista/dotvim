@@ -25,7 +25,6 @@ set runtimepath^=~/.vim/plugins/vim-airline
 set runtimepath^=~/.vim/plugins/vim-airline-themes
 set runtimepath^=~/.vim/plugins/vim-fugitive
 set runtimepath^=~/.vim/plugins/vim-graphql
-set runtimepath^=~/.vim/plugins/minibufexpl
 set runtimepath^=~/.vim/plugins/tabline.vim
 
 let mapleader=','
@@ -158,24 +157,6 @@ set writebackup
 set noundofile
 set dir=~/.vim/tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
-
-" ┌┬┐┬┌┐┌┬  ┌┐ ┬ ┬┌─┐  ┌─┐─┐ ┬┌─┐┬
-" ││││││││  ├┴┐│ │├┤   ├┤ ┌┴┬┘├─┘│
-" ┴ ┴┴┘└┘┴  └─┘└─┘└    └─┘┴ └─┴  ┴─┘
-let g:miniBufExplSplitBelow=0
-func! MBESplit(hv)
-  CMiniBufExplorer
-  if a:hv == 'v'
-    let g:miniBufExplVSplit=1
-    let g:miniBufExplMaxSize=32
-  else
-    let g:miniBufExplVSplit=0
-    let g:miniBufExplMaxSize=0
-  endif
-  MiniBufExplorer
-endfunc
-map <leader>mbeh :call MBESplit('h')<CR>
-map <leader>mbev :call MBESplit('v')<CR>
 
 " ┌─┐┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌─┐┬ ┬┌┐┌┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
 " │  │ │└─┐ │ │ ││││  ├┤ │ │││││   │ ││ ││││└─┐
