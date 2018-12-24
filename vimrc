@@ -5,6 +5,7 @@
 "           />
 "          |/
 "
+set runtimepath^=~/.vim/plugins/vim-code-dark
 set runtimepath^=~/.vim/plugins/papercolor-theme
 set runtimepath^=~/.vim/plugins/gruvbox
 set runtimepath^=~/.vim/plugins/nord-vim
@@ -29,6 +30,7 @@ set runtimepath^=~/.vim/plugins/tabline.vim
 
 let mapleader=','
 set backspace=
+set complete-=i
 
 " ┌─┐┌─┐┬  ┌─┐┬─┐┌─┐
 " │  │ ││  │ │├┬┘└─┐
@@ -66,9 +68,11 @@ func! SetColorSchemeTo(colorscheme)
     set background=dark
     let g:material_theme_style='palenight'
     colorscheme material
+  elseif a:colorscheme == 'codedark'
+    colorscheme codedark
   endif
 endfunc
-call SetColorSchemeTo('papercolor-light')
+call SetColorSchemeTo('codedark')
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
@@ -120,7 +124,7 @@ set splitright
 " └─┘└─┘┴ ┴┴└─└─┘┴ ┴┴┘└┘└─┘
 set incsearch
 set hlsearch
-set path+=**
+set path=.,**
 set wildignore+=**/node_modules/**
 nnoremap <leader><space> :nohlsearch<CR>
 

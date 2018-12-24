@@ -61,3 +61,6 @@
 [submodule "plugins/tabline.vim"]
 	path = plugins/tabline.vim
 	url = https://github.com/mkitt/tabline.vim
+[submodule "plugins/vim-code-dark"]
+	path = plugins/vim-code-dark
+	url = https://github.com/tomasiser/vim-code-dark
