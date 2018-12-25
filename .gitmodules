@@ -37,9 +37,6 @@
 [submodule "plugins/vim-one"]
 	path = plugins/vim-one
 	url = https://github.com/rakr/vim-one
-[submodule "plugins/tabline.vim"]
-	path = plugins/tabline.vim
-	url = https://github.com/mkitt/tabline.vim
 [submodule "plugins/lightline.vim"]
 	path = plugins/lightline.vim
 	url = https://github.com/itchyny/lightline.vim

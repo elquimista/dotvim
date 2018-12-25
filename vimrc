@@ -20,7 +20,6 @@ set runtimepath^=~/.vim/plugins/lightline.vim
 set runtimepath^=~/.vim/plugins/lightline-ale
 set runtimepath^=~/.vim/plugins/vim-fugitive
 set runtimepath^=~/.vim/plugins/vim-graphql
-set runtimepath^=~/.vim/plugins/tabline.vim
 
 let mapleader=','
 set backspace=
@@ -87,6 +86,10 @@ let g:lightline = {
       \     ['percent', 'lineinfo'],
       \     ['fileformat', 'fileencoding', 'filetype'],
       \   ],
+      \ },
+      \ 'tabline': {
+      \   'left': [['tabs']],
+      \   'right': [],
       \ },
       \ 'component_function': {
       \   'gitbranch': 'LightlineGitBranch',
