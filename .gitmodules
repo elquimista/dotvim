@@ -34,30 +34,12 @@
 [submodule "plugins/vim-graphql"]
 	path = plugins/vim-graphql
 	url = https://github.com/jparise/vim-graphql
-[submodule "plugins/papercolor-theme"]
-	path = plugins/papercolor-theme
-	url = https://github.com/NLKNguyen/papercolor-theme
-[submodule "plugins/gruvbox"]
-	path = plugins/gruvbox
-	url = https://github.com/morhetz/gruvbox
-[submodule "plugins/nord-vim"]
-	path = plugins/nord-vim
-	url = https://github.com/arcticicestudio/nord-vim
 [submodule "plugins/vim-one"]
 	path = plugins/vim-one
 	url = https://github.com/rakr/vim-one
-[submodule "plugins/ayu-vim"]
-	path = plugins/ayu-vim
-	url = https://github.com/ayu-theme/ayu-vim
-[submodule "plugins/material.vim"]
-	path = plugins/material.vim
-	url = https://github.com/kaicataldo/material.vim
 [submodule "plugins/tabline.vim"]
 	path = plugins/tabline.vim
 	url = https://github.com/mkitt/tabline.vim
-[submodule "plugins/vim-code-dark"]
-	path = plugins/vim-code-dark
-	url = https://github.com/tomasiser/vim-code-dark
 [submodule "plugins/lightline.vim"]
 	path = plugins/lightline.vim
 	url = https://github.com/itchyny/lightline.vim

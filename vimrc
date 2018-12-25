@@ -5,13 +5,7 @@
 "           />
 "          |/
 "
-set runtimepath^=~/.vim/plugins/vim-code-dark
-set runtimepath^=~/.vim/plugins/papercolor-theme
-set runtimepath^=~/.vim/plugins/gruvbox
-set runtimepath^=~/.vim/plugins/nord-vim
 set runtimepath^=~/.vim/plugins/vim-one
-set runtimepath^=~/.vim/plugins/ayu-vim
-set runtimepath^=~/.vim/plugins/material.vim
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-jsx
 set runtimepath^=~/.vim/plugins/auto-pairs
@@ -40,39 +34,8 @@ if exists('+termguicolors')
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-func! SetColorSchemeTo(colorscheme)
-  if a:colorscheme == 'papercolor-dark'
-    set background=dark
-    colorscheme PaperColor
-  elseif a:colorscheme == 'papercolor-light'
-    set background=light
-    colorscheme PaperColor
-  elseif a:colorscheme == 'gruvbox-dark'
-    set background=dark
-    colorscheme gruvbox
-  elseif a:colorscheme == 'gruvbox-light'
-    set background=light
-    colorscheme gruvbox
-  elseif a:colorscheme == 'nord'
-    colorscheme nord
-  elseif a:colorscheme == 'one-dark'
-    set background=dark
-    colorscheme one
-  elseif a:colorscheme == 'ayu-dark'
-    let g:ayucolor='dark'
-    colorscheme ayu
-  elseif a:colorscheme == 'ayu-mirage'
-    let g:ayucolor='mirage'
-    colorscheme ayu
-  elseif a:colorscheme == 'material-palenight'
-    set background=dark
-    let g:material_theme_style='palenight'
-    colorscheme material
-  elseif a:colorscheme == 'codedark'
-    colorscheme codedark
-  endif
-endfunc
-call SetColorSchemeTo('one-dark')
+set background=dark
+colorscheme one
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
