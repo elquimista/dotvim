@@ -72,7 +72,7 @@ func! SetColorSchemeTo(colorscheme)
     colorscheme codedark
   endif
 endfunc
-call SetColorSchemeTo('codedark')
+call SetColorSchemeTo('one-dark')
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
