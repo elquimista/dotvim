@@ -22,8 +22,8 @@ set runtimepath^=~/.vim/plugins/vim-matchup
 set runtimepath^=~/.vim/plugins/ale
 set runtimepath^=~/.vim/plugins/vim-tmux-navigator
 set runtimepath^=~/.vim/plugins/vim-git-blame
-set runtimepath^=~/.vim/plugins/vim-airline
-set runtimepath^=~/.vim/plugins/vim-airline-themes
+set runtimepath^=~/.vim/plugins/lightline.vim
+set runtimepath^=~/.vim/plugins/lightline-ale
 set runtimepath^=~/.vim/plugins/vim-fugitive
 set runtimepath^=~/.vim/plugins/vim-graphql
 set runtimepath^=~/.vim/plugins/tabline.vim
@@ -79,6 +79,7 @@ call SetColorSchemeTo('one-dark')
 " └─┘ ┴ ┘└┘ ┴ ┴ ┴┴ └─
 syntax on
 let g:javascript_plugin_flow=1
+let g:ale_open_list = 1
 augroup filetypedetect
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
   au BufRead,BufNewFile *.slim set filetype=slim
@@ -103,10 +104,43 @@ filetype plugin indent on
 set wildmenu
 set showmatch
 set colorcolumn=80
-if !exists('g:airline_symbols')
-  let g:airline_symbols={}
-endif
-let g:airline_symbols.branch=''
+func! LightlineGitBranch()
+  return exists('*fugitive#head') ? ' '.fugitive#head() : ''
+endfunc
+set laststatus=2
+let g:lightline#ale#indicator_checking = "\uf110"
+let g:lightline#ale#indicator_warnings = "\uf071 "
+let g:lightline#ale#indicator_errors = "\uf05e "
+let g:lightline#ale#indicator_ok = "\uf00c"
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [
+      \     ['mode', 'paste'],
+      \     ['gitbranch', 'readonly', 'filename', 'modified'],
+      \   ],
+      \   'right': [
+      \     ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok'],
+      \     ['percent', 'lineinfo'],
+      \     ['fileformat', 'fileencoding', 'filetype'],
+      \   ],
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'LightlineGitBranch',
+      \ },
+      \ 'component_expand': {
+      \   'linter_checking': 'lightline#ale#checking',
+      \   'linter_warnings': 'lightline#ale#warnings',
+      \   'linter_errors': 'lightline#ale#errors',
+      \   'linter_ok': 'lightline#ale#ok',
+      \ },
+      \ 'component_type': {
+      \   'linter_checking': 'left',
+      \   'linter_warnings': 'warning',
+      \   'linter_errors': 'error',
+      \   'linter_ok': 'left',
+      \ },
+      \ }
 set noshowmode
 let g:netrw_liststyle=3
 let g:netrw_banner=0

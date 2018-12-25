@@ -28,12 +28,6 @@
 [submodule "plugins/vim-git-blame"]
 	path = plugins/vim-git-blame
 	url = https://github.com/elquimista/vim-git-blame.git
-[submodule "plugins/vim-airline"]
-	path = plugins/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule "plugins/vim-airline-themes"]
-	path = plugins/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "plugins/vim-fugitive"]
 	path = plugins/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -64,3 +58,9 @@
 [submodule "plugins/vim-code-dark"]
 	path = plugins/vim-code-dark
 	url = https://github.com/tomasiser/vim-code-dark
+[submodule "plugins/lightline.vim"]
+	path = plugins/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "plugins/lightline-ale"]
+	path = plugins/lightline-ale
+	url = https://github.com/maximbaz/lightline-ale
