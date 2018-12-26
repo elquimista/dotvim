@@ -34,12 +34,12 @@
 [submodule "plugins/vim-graphql"]
 	path = plugins/vim-graphql
 	url = https://github.com/jparise/vim-graphql
-[submodule "plugins/vim-one"]
-	path = plugins/vim-one
-	url = https://github.com/rakr/vim-one
 [submodule "plugins/lightline.vim"]
 	path = plugins/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
 [submodule "plugins/lightline-ale"]
 	path = plugins/lightline-ale
 	url = https://github.com/maximbaz/lightline-ale
+[submodule "plugins/papercolor-theme"]
+	path = plugins/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme

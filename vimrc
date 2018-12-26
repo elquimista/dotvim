@@ -5,7 +5,7 @@
 "           />
 "          |/
 "
-set runtimepath^=~/.vim/plugins/vim-one
+set runtimepath^=~/.vim/plugins/papercolor-theme
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-jsx
 set runtimepath^=~/.vim/plugins/auto-pairs
@@ -33,15 +33,15 @@ if exists('+termguicolors')
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-set background=dark
-colorscheme one
+set background=light
+colorscheme PaperColor
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
 " └─┘ ┴ ┘└┘ ┴ ┴ ┴┴ └─
 syntax on
 let g:javascript_plugin_flow=1
-let g:ale_open_list = 1
+let g:ale_open_list = 0
 augroup filetypedetect
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
   au BufRead,BufNewFile *.slim set filetype=slim
@@ -75,7 +75,7 @@ let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c"
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'PaperColor',
       \ 'active': {
       \   'left': [
       \     ['mode', 'paste'],
