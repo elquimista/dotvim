@@ -7,6 +7,7 @@
 "
 set runtimepath^=~/.vim/plugins/papercolor-theme
 set runtimepath^=~/.vim/plugins/vim-javascript
+set runtimepath^=~/.vim/plugins/vim-coffee-script
 set runtimepath^=~/.vim/plugins/vim-jsx
 set runtimepath^=~/.vim/plugins/auto-pairs
 set runtimepath^=~/.vim/plugins/vim-endwise
@@ -43,6 +44,7 @@ syntax on
 let g:javascript_plugin_flow=1
 let g:ale_open_list = 0
 augroup filetypedetect
+  au BufRead,BufNewFile *.coffee set filetype=coffee
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
   au BufRead,BufNewFile *.slim set filetype=slim
   au BufRead,BufNewFile *.graphql set filetype=graphql
