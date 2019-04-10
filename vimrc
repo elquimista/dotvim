@@ -34,7 +34,7 @@ if exists('+termguicolors')
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-set background=light
+set background=dark
 colorscheme PaperColor
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
