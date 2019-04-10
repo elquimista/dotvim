@@ -68,9 +68,6 @@ filetype plugin indent on
 set wildmenu
 set showmatch
 set colorcolumn=80
-func! LightlineGitBranch()
-  return exists('*fugitive#head') ? ' '.fugitive#head() : ''
-endfunc
 set laststatus=2
 let g:lightline#ale#indicator_checking = "\uf110"
 let g:lightline#ale#indicator_warnings = "\uf071 "
@@ -81,7 +78,7 @@ let g:lightline = {
       \ 'active': {
       \   'left': [
       \     ['mode', 'paste'],
-      \     ['gitbranch', 'readonly', 'filename', 'modified'],
+      \     ['readonly', 'filename', 'modified'],
       \   ],
       \   'right': [
       \     ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok'],
@@ -92,9 +89,6 @@ let g:lightline = {
       \ 'tabline': {
       \   'left': [['tabs']],
       \   'right': [],
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'LightlineGitBranch',
       \ },
       \ 'component_expand': {
       \   'linter_checking': 'lightline#ale#checking',
