@@ -5,6 +5,13 @@
 "           />
 "          |/
 "
+" Prerequisites:
+"
+" brew install fzf
+" brew install fd
+"
+set runtimepath^=/usr/local/opt/fzf
+set runtimepath^=~/.vim/plugins/fzf.vim
 set runtimepath^=~/.vim/plugins/papercolor-theme
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-coffee-script

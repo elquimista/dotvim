@@ -46,3 +46,6 @@
 [submodule "plugins/vim-coffee-script"]
 	path = plugins/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script
+[submodule "plugins/fzf.vim"]
+	path = plugins/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
