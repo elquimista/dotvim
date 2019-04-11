@@ -49,3 +49,6 @@
 [submodule "plugins/fzf.vim"]
 	path = plugins/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "plugins/vim-grepper"]
+	path = plugins/vim-grepper
+	url = https://github.com/mhinz/vim-grepper

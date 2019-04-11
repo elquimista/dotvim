@@ -9,9 +9,11 @@
 "
 " brew install fzf
 " brew install fd
+" brew install ripgrep
 "
 set runtimepath^=/usr/local/opt/fzf
 set runtimepath^=~/.vim/plugins/fzf.vim
+set runtimepath^=~/.vim/plugins/vim-grepper
 set runtimepath^=~/.vim/plugins/papercolor-theme
 set runtimepath^=~/.vim/plugins/vim-javascript
 set runtimepath^=~/.vim/plugins/vim-coffee-script
@@ -127,9 +129,14 @@ set splitright
 " └─┘└─┘┴ ┴┴└─└─┘┴ ┴┴┘└┘└─┘
 set incsearch
 set hlsearch
-set path=.,**
-set wildignore+=**/node_modules/**
 nnoremap <leader><space> :nohlsearch<CR>
+let g:grepper = {
+    \ 'tools': ['rg', 'git'],
+    \ }
+nnoremap <leader>g :Grepper<CR>
+nnoremap <leader>* :Grepper -cword -noprompt<CR>
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
 
 " ┌─┐┌─┐┬  ┌┬┐┬┌┐┌┌─┐
 " ├┤ │ ││   │││││││ ┬
