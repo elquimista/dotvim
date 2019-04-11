@@ -30,6 +30,7 @@ set runtimepath^=~/.vim/plugins/lightline.vim
 set runtimepath^=~/.vim/plugins/lightline-ale
 set runtimepath^=~/.vim/plugins/vim-fugitive
 set runtimepath^=~/.vim/plugins/vim-graphql
+set runtimepath^=~/.vim/plugins/vim-commentary
 
 let mapleader=','
 set backspace=

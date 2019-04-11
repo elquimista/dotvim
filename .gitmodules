@@ -52,3 +52,6 @@
 [submodule "plugins/vim-grepper"]
 	path = plugins/vim-grepper
 	url = https://github.com/mhinz/vim-grepper
+[submodule "plugins/vim-commentary"]
+	path = plugins/vim-commentary
+	url = https://github.com/tpope/vim-commentary
