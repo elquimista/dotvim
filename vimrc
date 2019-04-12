@@ -54,8 +54,8 @@ colorscheme PaperColor
 syntax on
 let g:javascript_plugin_flow=1
 let g:ale_open_list = 0
-nmap <silent> <C-k> <plug>(ale_previous_wrap)
-nmap <silent> <C-j> <plug>(ale_next_wrap)
+nmap <silent> <leader><C-k> <plug>(ale_previous_wrap)
+nmap <silent> <leader><C-j> <plug>(ale_next_wrap)
 augroup filetypedetect
   au BufRead,BufNewFile *.coffee set filetype=coffee
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
