@@ -55,3 +55,6 @@
 [submodule "plugins/vim-commentary"]
 	path = plugins/vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule "plugins/QFEnter"]
+	path = plugins/QFEnter
+	url = https://github.com/yssl/QFEnter

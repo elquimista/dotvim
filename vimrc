@@ -31,6 +31,7 @@ set runtimepath^=~/.vim/plugins/vim-tmux-navigator
 set runtimepath^=~/.vim/plugins/vim-fugitive
 set runtimepath^=~/.vim/plugins/vim-git-blame
 set runtimepath^=~/.vim/plugins/vim-commentary
+set runtimepath^=~/.vim/plugins/QFEnter
 
 let mapleader=','
 set backspace=
@@ -140,6 +141,12 @@ nnoremap <leader>g :Grepper<CR>
 nnoremap <leader>* :Grepper -cword -noprompt<CR>
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
+let g:qfenter_keymap = {
+    \ 'vopen': ['<C-v>'],
+    \ 'hopen': ['<C-x>'],
+    \ 'topen': ['<C-t>'],
+    \ }
+let g:qfenter_enable_autoquickfix=0
 
 " ┌─┐┌─┐┬  ┌┬┐┬┌┐┌┌─┐
 " ├┤ │ ││   │││││││ ┬
