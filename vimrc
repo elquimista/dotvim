@@ -52,10 +52,16 @@ colorscheme PaperColor
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
 " └─┘ ┴ ┘└┘ ┴ ┴ ┴┴ └─
 syntax on
+
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
+
 let g:javascript_plugin_flow=1
 let g:ale_open_list = 0
 nmap <silent> <leader><C-k> <plug>(ale_previous_wrap)
 nmap <silent> <leader><C-j> <plug>(ale_next_wrap)
+
 augroup filetypedetect
   au BufRead,BufNewFile *.coffee set filetype=coffee
   au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
