@@ -36,6 +36,7 @@ set runtimepath^=~/.vim/plugins/QFEnter
 let mapleader=','
 set backspace=
 set complete-=i
+set exrc " allows per-project vimrc files
 
 " ┌─┐┌─┐┬  ┌─┐┬─┐┌─┐
 " │  │ ││  │ │├┬┘└─┐
@@ -235,3 +236,5 @@ augroup end
 if has('autocmd')
   autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
+
+set secure " disables unsafe commands in per-project vimrc files
