@@ -25,9 +25,6 @@
 [submodule "plugins/vim-tmux-navigator"]
 	path = plugins/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
-[submodule "plugins/vim-git-blame"]
-	path = plugins/vim-git-blame
-	url = https://github.com/elquimista/vim-git-blame.git
 [submodule "plugins/vim-fugitive"]
 	path = plugins/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
