@@ -55,3 +55,6 @@
 [submodule "plugins/QFEnter"]
 	path = plugins/QFEnter
 	url = https://github.com/yssl/QFEnter
+[submodule "plugins/gv.vim"]
+	path = plugins/gv.vim
+	url = https://github.com/junegunn/gv.vim

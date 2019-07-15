@@ -29,6 +29,7 @@ set runtimepath^=~/.vim/plugins/ale
 set runtimepath^=~/.vim/plugins/lightline-ale
 set runtimepath^=~/.vim/plugins/vim-tmux-navigator
 set runtimepath^=~/.vim/plugins/vim-fugitive
+set runtimepath^=~/.vim/plugins/gv.vim
 set runtimepath^=~/.vim/plugins/vim-commentary
 set runtimepath^=~/.vim/plugins/QFEnter
 
