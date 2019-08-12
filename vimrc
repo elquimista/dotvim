@@ -14,6 +14,7 @@
 set runtimepath^=/usr/local/opt/fzf
 set runtimepath^=~/.vim/plugins/fzf.vim
 set runtimepath^=~/.vim/plugins/vim-grepper
+set runtimepath^=~/.vim/plugins/vim-solarized8
 set runtimepath^=~/.vim/plugins/papercolor-theme
 set runtimepath^=~/.vim/plugins/lightline.vim
 set runtimepath^=~/.vim/plugins/vim-javascript
@@ -46,8 +47,9 @@ if exists('+termguicolors')
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-set background=dark
-colorscheme PaperColor
+set background=light
+let g:solarized_termtrans=0
+colorscheme solarized8
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
@@ -94,7 +96,7 @@ let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c"
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [
       \     ['mode', 'paste'],
@@ -158,10 +160,10 @@ let g:qfenter_enable_autoquickfix=0
 " ┌─┐┌─┐┬  ┌┬┐┬┌┐┌┌─┐
 " ├┤ │ ││   │││││││ ┬
 " └  └─┘┴─┘─┴┘┴┘└┘└─┘
-set foldenable
-set foldmethod=indent
-set foldlevelstart=10
-set foldnestmax=10
+" set foldenable
+" set foldmethod=indent
+" set foldlevelstart=10
+" set foldnestmax=10
 
 " ┌─┐┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌┬┐┌─┐┬  ┬┌─┐┌┬┐┌─┐┌┐┌┌┬┐┌─┐
 " │  │ │└─┐ │ │ ││││  ││││ │└┐┌┘├┤ │││├┤ │││ │ └─┐
@@ -203,35 +205,35 @@ endfunc
 
 noremap <leader>tn :call ToggleNumber()<CR>
 
-let g:skipview_files = []
-function! MakeViewCheck()
-  if has('quickfix') && &buftype =~ 'nofile'
-    " Buffer is marked as not a file
-    return 0
-  endif
-  if empty(glob(expand('%:p')))
-    " File does not exist on disk
-    return 0
-  endif
-  if len($TEMP) && expand('%:p:h') == $TEMP
-    " We're in a temp dir
-    return 0
-  endif
-  if len($TMP) && expand('%:p:h') == $TMP
-    " Also in temp dir
-    return 0
-  endif
-  if index(g:skipview_files, expand('%')) >= 0
-    " File is in skip list
-    return 0
-  endif
-  return 1
-endfunction
+" let g:skipview_files = []
+" function! MakeViewCheck()
+"   if has('quickfix') && &buftype =~ 'nofile'
+"     " Buffer is marked as not a file
+"     return 0
+"   endif
+"   if empty(glob(expand('%:p')))
+"     " File does not exist on disk
+"     return 0
+"   endif
+"   if len($TEMP) && expand('%:p:h') == $TEMP
+"     " We're in a temp dir
+"     return 0
+"   endif
+"   if len($TMP) && expand('%:p:h') == $TMP
+"     " Also in temp dir
+"     return 0
+"   endif
+"   if index(g:skipview_files, expand('%')) >= 0
+"     " File is in skip list
+"     return 0
+"   endif
+"   return 1
+" endfunction
 
-augroup vimrcAutoView
-  au BufWritePost,BufLeave,WinLeave ?* if MakeViewCheck() | mkview | endif
-  au BufWinEnter ?* if MakeViewCheck() | silent loadview | endif
-augroup end
+" augroup vimrcAutoView
+"   au BufWritePost,BufLeave,WinLeave ?* if MakeViewCheck() | mkview | endif
+"   au BufWinEnter ?* if MakeViewCheck() | silent loadview | endif
+" augroup end
 
 if has('autocmd')
   autocmd BufReadPost fugitive://* set bufhidden=delete

@@ -58,3 +58,6 @@
 [submodule "plugins/gv.vim"]
 	path = plugins/gv.vim
 	url = https://github.com/junegunn/gv.vim
+[submodule "plugins/vim-solarized8"]
+	path = plugins/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
