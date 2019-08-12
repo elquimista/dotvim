@@ -33,6 +33,7 @@ set runtimepath^=~/.vim/plugins/vim-fugitive
 set runtimepath^=~/.vim/plugins/gv.vim
 set runtimepath^=~/.vim/plugins/vim-commentary
 set runtimepath^=~/.vim/plugins/QFEnter
+set runtimepath^=~/.vim/plugins/limelight.vim
 
 let mapleader=','
 set backspace=
