@@ -48,9 +48,9 @@ if exists('+termguicolors')
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-set background=light
+set background=dark
 let g:solarized_termtrans=0
-colorscheme solarized8
+colorscheme papercolor
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
@@ -59,7 +59,7 @@ syntax on
 
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
-highlight Comment cterm=italic
+" highlight Comment cterm=italic
 
 let g:javascript_plugin_flow=1
 let g:ale_open_list = 0
@@ -97,7 +97,7 @@ let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c"
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'PaperColor',
       \ 'active': {
       \   'left': [
       \     ['mode', 'paste'],
@@ -161,10 +161,10 @@ let g:qfenter_enable_autoquickfix=0
 " ┌─┐┌─┐┬  ┌┬┐┬┌┐┌┌─┐
 " ├┤ │ ││   │││││││ ┬
 " └  └─┘┴─┘─┴┘┴┘└┘└─┘
-" set foldenable
-" set foldmethod=indent
-" set foldlevelstart=10
-" set foldnestmax=10
+set foldenable
+set foldmethod=indent
+set foldlevelstart=10
+set foldnestmax=10
 
 " ┌─┐┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌┬┐┌─┐┬  ┬┌─┐┌┬┐┌─┐┌┐┌┌┬┐┌─┐
 " │  │ │└─┐ │ │ ││││  ││││ │└┐┌┘├┤ │││├┤ │││ │ └─┐
