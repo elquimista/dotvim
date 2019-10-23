@@ -90,7 +90,7 @@ set cursorline
 filetype plugin indent on
 set wildmenu
 set showmatch
-set colorcolumn=80
+set colorcolumn=81
 set laststatus=2
 let g:lightline#ale#indicator_checking = "\uf110"
 let g:lightline#ale#indicator_warnings = "\uf071 "
