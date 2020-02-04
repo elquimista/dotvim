@@ -1,2 +1,4 @@
 /tmp/*
 /view/*
+/plugins/*
+!/plugins/vim-plug

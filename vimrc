@@ -10,30 +10,32 @@
 " brew install fzf
 " brew install fd
 " brew install ripgrep
-"
-set runtimepath^=/usr/local/opt/fzf
-set runtimepath^=~/.vim/plugins/fzf.vim
-set runtimepath^=~/.vim/plugins/vim-grepper
-set runtimepath^=~/.vim/plugins/vim-solarized8
-set runtimepath^=~/.vim/plugins/papercolor-theme
-set runtimepath^=~/.vim/plugins/lightline.vim
-set runtimepath^=~/.vim/plugins/vim-javascript
-set runtimepath^=~/.vim/plugins/vim-coffee-script
-set runtimepath^=~/.vim/plugins/vim-jsx
-set runtimepath^=~/.vim/plugins/vim-markdown
-set runtimepath^=~/.vim/plugins/vim-slim
-set runtimepath^=~/.vim/plugins/vim-graphql
-set runtimepath^=~/.vim/plugins/auto-pairs
-set runtimepath^=~/.vim/plugins/vim-endwise
-set runtimepath^=~/.vim/plugins/vim-matchup
-set runtimepath^=~/.vim/plugins/ale
-set runtimepath^=~/.vim/plugins/lightline-ale
-set runtimepath^=~/.vim/plugins/vim-tmux-navigator
-set runtimepath^=~/.vim/plugins/vim-fugitive
-set runtimepath^=~/.vim/plugins/gv.vim
-set runtimepath^=~/.vim/plugins/vim-commentary
-set runtimepath^=~/.vim/plugins/QFEnter
-set runtimepath^=~/.vim/plugins/limelight.vim
+
+call plug#begin('~/.vim/plugins')
+  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf.vim'
+  Plug 'mhinz/vim-grepper'
+  Plug 'lifepillar/vim-solarized8'
+  Plug 'NLKNguyen/papercolor-theme'
+  Plug 'itchyny/lightline.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'kchmck/vim-coffee-script'
+  Plug 'MaxMEllon/vim-jsx-pretty'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'slim-template/vim-slim'
+  Plug 'jparise/vim-graphql'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'tpope/vim-endwise'
+  Plug 'andymass/vim-matchup'
+  Plug 'w0rp/ale'
+  Plug 'maximbaz/lightline-ale'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
+  Plug 'tpope/vim-commentary'
+  Plug 'yssl/QFEnter'
+  Plug 'junegunn/limelight.vim'
+call plug#end()
 
 let mapleader=','
 set backspace=
@@ -68,7 +70,6 @@ nmap <silent> <leader><C-j> <plug>(ale_next_wrap)
 
 augroup filetypedetect
   au BufRead,BufNewFile *.coffee set filetype=coffee
-  au BufRead,BufNewFile *.js,*.jsx set filetype=javascript.jsx
   au BufRead,BufNewFile *.slim set filetype=slim
   au BufRead,BufNewFile *.graphql set filetype=graphql
 augroup END
