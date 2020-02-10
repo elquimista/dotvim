@@ -35,6 +35,8 @@ call plug#begin('~/.vim/plugins')
   Plug 'tpope/vim-commentary'
   Plug 'yssl/QFEnter'
   Plug 'junegunn/limelight.vim'
+  Plug 'edkolev/tmuxline.vim'
+  Plug 'guns/xterm-color-table.vim'
 call plug#end()
 
 let mapleader=','
@@ -52,7 +54,7 @@ if exists('+termguicolors')
 endif
 set background=dark
 let g:solarized_termtrans=0
-colorscheme papercolor
+colorscheme solarized8
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
@@ -98,7 +100,7 @@ let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c"
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [
       \     ['mode', 'paste'],
