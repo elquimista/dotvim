@@ -15,8 +15,8 @@ call plug#begin('~/.vim/plugins')
   Plug '/usr/local/opt/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'mhinz/vim-grepper'
-  Plug 'lifepillar/vim-solarized8'
-  Plug 'NLKNguyen/papercolor-theme'
+  " Plug 'NLKNguyen/papercolor-theme'
+  Plug 'morhetz/gruvbox'
   Plug 'itchyny/lightline.vim'
   Plug 'pangloss/vim-javascript'
   Plug 'kchmck/vim-coffee-script'
@@ -53,8 +53,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 set background=dark
-let g:solarized_termtrans=0
-colorscheme solarized8
+colorscheme gruvbox
 
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
@@ -100,7 +99,7 @@ let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c"
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [
       \     ['mode', 'paste'],
