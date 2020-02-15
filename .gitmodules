@@ -1,4 +1,4 @@
 [submodule "plugins/vim-plug"]
 	path = plugins/vim-plug
-	url = https://github.com/junegunn/vim-plug
+	url = git://github.com/junegunn/vim-plug
 	branch = master
