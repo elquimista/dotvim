@@ -37,6 +37,8 @@ call plug#begin('~/.vim/plugins')
   Plug 'junegunn/limelight.vim'
   Plug 'edkolev/tmuxline.vim'
   Plug 'guns/xterm-color-table.vim'
+  Plug 'leafOfTree/vim-svelte-plugin'
+  Plug 'cakebaker/scss-syntax.vim'
 call plug#end()
 
 let mapleader=','
@@ -59,6 +61,7 @@ colorscheme gruvbox
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
 " └─┘ ┴ ┘└┘ ┴ ┴ ┴┴ └─
 syntax on
+let g:vim_svelte_plugin_use_sass = 1
 
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
@@ -73,6 +76,7 @@ augroup filetypedetect
   au BufRead,BufNewFile *.coffee set filetype=coffee
   au BufRead,BufNewFile *.slim set filetype=slim
   au BufRead,BufNewFile *.graphql set filetype=graphql
+  au BufRead,BufNewFile *.svelte set filetype=html.svelte
 augroup END
 
 " ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐   ┬   ┌┬┐┌─┐┌┐ ┌─┐
