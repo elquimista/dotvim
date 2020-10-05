@@ -39,6 +39,7 @@ call plug#begin('~/.vim/plugins')
   Plug 'guns/xterm-color-table.vim'
   Plug 'leafOfTree/vim-svelte-plugin'
   Plug 'cakebaker/scss-syntax.vim'
+  Plug 'stefandtw/quickfix-reflector.vim'
 call plug#end()
 
 let mapleader=','
