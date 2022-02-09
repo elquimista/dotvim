@@ -2,3 +2,5 @@
 /view/*
 /plugins/*
 !/plugins/vim-plug
+
+.netrwhist
