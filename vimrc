@@ -12,7 +12,7 @@
 " brew install ripgrep
 
 call plug#begin('~/.vim/plugins')
-  Plug '$FZF_BASE'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'mhinz/vim-grepper'
   " Plug 'NLKNguyen/papercolor-theme'
