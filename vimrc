@@ -40,6 +40,7 @@ call plug#begin('~/.vim/plugins')
   Plug 'leafOfTree/vim-svelte-plugin'
   Plug 'cakebaker/scss-syntax.vim'
   Plug 'stefandtw/quickfix-reflector.vim'
+  Plug 'ledger/vim-ledger'
 call plug#end()
 
 let mapleader=','
