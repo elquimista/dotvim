@@ -249,3 +249,5 @@ if has('autocmd')
 endif
 
 set secure " disables unsafe commands in per-project vimrc files
+
+autocmd FileType ledger set colorcolumn=51,81
