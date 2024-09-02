@@ -14,6 +14,11 @@
 call plug#begin('~/.vim/plugins')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+
+  " Use older versions of fzf, fzf.vim for OS X 10.9.x and earlier:
+  " Plug 'junegunn/fzf', { 'tag': '0.33.0' }
+  " Plug 'junegunn/fzf.vim', { 'commit': '04bfa81' }
+
   Plug 'mhinz/vim-grepper'
   " Plug 'NLKNguyen/papercolor-theme'
   Plug 'morhetz/gruvbox'
