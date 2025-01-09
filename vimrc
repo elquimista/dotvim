@@ -65,6 +65,8 @@ endif
 set background=dark
 colorscheme solarized
 
+let g:ledger_is_hledger=v:false " workaround fix for ledger plugin related errors
+
 " ┌─┐┬ ┬┌┐┌┌┬┐┌─┐─┐ ┬
 " └─┐└┬┘│││ │ ├─┤┌┴┬┘
 " └─┘ ┴ ┘└┘ ┴ ┴ ┴┴ └─
@@ -158,6 +160,7 @@ set splitright
 set incsearch
 set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <esc>^[ <esc>^[
 let g:grepper = {
     \ 'tools': ['rg', 'git'],
     \ }
